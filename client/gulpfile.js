@@ -115,14 +115,14 @@ gulp.task('create-dev-config', function () {
     /** Creates a config file for Angular with the relevant environment variables for development */
     return gulp.src('taskingmanager.config.json')
         .pipe(config('taskingmanager.config', {environment: 'development'}))
-        .pipe(gulp.dest('app'))
+        .pipe(gulp.dest('app'));
 });
 
 gulp.task('create-release-config', function () {
     /** Creates a config file for Angular with the relevant environment variables for release */
     return gulp.src('taskingmanager.config.json')
         .pipe(config('taskingmanager.config', {environment: 'release'}))
-        .pipe(gulp.dest('app'))
+        .pipe(gulp.dest('app'));
 });
 
 /** Build task for will minify the app and copy it to the dist folder ready to deploy */

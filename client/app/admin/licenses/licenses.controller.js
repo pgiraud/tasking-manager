@@ -31,6 +31,6 @@
          */
         vm.createNewLicense = function(){
             $location.path('/admin/licenses/edit/new');
-        }
+        };
     }
 })();

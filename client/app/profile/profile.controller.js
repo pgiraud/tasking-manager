@@ -66,7 +66,7 @@
             osmDetailsPromise.then(function (data) {
                 // On success, set the OSM account details for this user
                 vm.osmUserDetails = data;
-            })
+            });
         }
 
         /**
@@ -77,7 +77,9 @@
             resultsPromise.then(function (data) {
                 vm.projects = data.mappedProjects;
                 // iterate over the projects and add the center of the project as a point on the map
-                for (var i = 0; i < vm.projects.length; i++) {
+                var i = 0;
+                var len = vm.projects.length;
+                for (i; i < len; i++) {
                     projectMapService.showProjectOnMap(vm.projects[i], vm.projects[i].centroid);
                 }
             }, function () {

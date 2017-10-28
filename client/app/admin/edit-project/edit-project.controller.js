@@ -84,7 +84,9 @@
             // Get available languages
             var resultsPromise = settingsService.getSettings();
             resultsPromise.then(function (data) {
-                for (var i = 0; i < data.supportedLanguages.length; i++){
+                var i = 0;
+                var len = data.supportedLanguages.length;
+                for (i; i < len; i++){
                     vm.locales.push(data.supportedLanguages[i].code);
                 }
             });
